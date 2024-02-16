@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: #333; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: rgb(0, 153, 255);
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: rgb(0, 204, 255);
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+.subnav:hover .subnav-content {
+  width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 200px;
+    max-width: 300px;
+    left: unset;
+}
+.sub-nav{
+  width:100%;
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#home">Home</a>
+  <div class="subnav">
+    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a class="sub-nav" href="#company">Company</a>
+      <a class="sub-nav" href="#team">Team</a>
+      <a class="sub-nav" href="#careers">Careers</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">Services<i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a class="sub-nav" href="./public/learning.html">Gen Learning</a>
+      <a class="sub-nav" href="./public/R&D.html">Research</a>     
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">Blogs<i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a class="sub-nav" href="#systemdesign">System Design</a>
+      <a  class="sub-nav" href="#designpattern">Design Pattern</a>
+      <a  class="sub-nav" href="#mentoring">Mentoring</a>
+      <a  class="sub-nav" href="#upreskill">Up-skill and Re-skill</a>
+    </div>
+  </div>
+  <a href="./public/contact.html">Contact</a>
+</div>
+
+<div style="padding:0 16px">
+  <h3>Subnav/dropdown menu inside a Navigation Bar</h3>
+  <p>Hover over the "about", "services" or "partners" link to see the sub navigation menu.</p>
+</div>
+
+</body>
+</html>
